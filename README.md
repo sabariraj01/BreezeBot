@@ -10,3 +10,16 @@ Natural Language Understanding :
     
 Contextual Responses : 
     The chatbot generates responses based on the predicted intent, providing appropriate and contextual replies to user queries.
+
+# Usage :
+Frontend:
+
+    npm start
+
+Backend :
+
+    npm start
+
+Cbot( Flask Server containing the Chatbot ) :
+
+    python app.py
