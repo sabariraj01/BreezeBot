@@ -44,7 +44,6 @@ Version Control : Git and GitHub are used for version control and collaboration.
 
 # Sample Outputs :
 
-![WhatsApp Image 2024-05-10 at 12 50 03_d60411f9](https://github.com/sabariraj01/Mental-Health-Care_Chatbot/assets/114046096/6bf213b9-bd52-4756-bf2b-14a9342ecfde)
 
 
 
