@@ -30,14 +30,21 @@ Programming Language :
    Python, JS
 
 Libraries/Frameworks :
-Flask: For building the HTTP server to host the chatbot.
 
-NLTK: For natural language processing tasks such as tokenization and lemmatization.
+Flask : For building the HTTP server to host the chatbot.
 
-Keras: For building and training neural network models.
+NLTK : For natural language processing tasks such as tokenization and lemmatization.
 
-Model Deployment: The trained model is deployed using Flask as a RESTful API endpoint.
+Keras : For building and training neural network models.
 
-Version Control: Git and GitHub are used for version control and collaboration.
+Model Deployment : The trained model is hosted using Flask as a RESTful API endpoint.
+
+Version Control : Git and GitHub are used for version control and collaboration.
+
+
+# Sample Outputs :
+
+![WhatsApp Image 2024-05-10 at 12 50 03_d60411f9](https://github.com/sabariraj01/Mental-Health-Care_Chatbot/assets/114046096/6bf213b9-bd52-4756-bf2b-14a9342ecfde)
+
 
 
