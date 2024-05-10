@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chatbot</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 30px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+    .container h1 {
+      text-align: center;
+      color: #333;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .input-field {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .submit-btn {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      background-color: #007bff;
+      color: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .submit-btn:hover {
+      background-color: #0056b3;
+    }
+    .error {
+      color: red;
+      margin-top: 10px;
+    }
+    .response {
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #f9f9f9;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Chatbot</h1>
+    <div class="form-group">
+      <input 
+        class="input-field"
+        id="userInput"
+        placeholder="Type your message..." 
+      />
+    </div>
+    <button class="submit-btn" id="sendButton">Send</button>
+    <div id="error" class="error"></div>
+    <div id="response" class="response"></div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const userInput = document.getElementById('userInput');
+      const sendButton = document.getElementById('sendButton');
+      const errorDiv = document.getElementById('error');
+      const responseDiv = document.getElementById('response');
+
+      sendButton.addEventListener('click', async function() {
+        const input = userInput.value.trim();
+        if (input === '') {
+          errorDiv.textContent = 'Please enter a message.';
+          return;
+        }
+        errorDiv.textContent = '';
+        try {
+          // Assuming handleSubmit function sends the input to a server and gets a response
+          const response = await handleSubmit(input);
+          displayResponse(response);
+        } catch (error) {
+          console.error('Error:', error);
+          displayResponse('An error occurred. Please try again later.');
+        }
+      });
+
+      async function handleSubmit(input) {
+        // This is where you would send the input to your server and handle the response
+        // For demonstration purposes, let's just return a mock response after a short delay
+        await new Promise(resolve => setTimeout(resolve, 1000)); // Simulating server delay
+        return 'Mock response: You said "' + input + '"';
+      }
+
+      function displayResponse(response) {
+        responseDiv.innerHTML = `
+          <strong>Chatbot:</strong>
+          <p>${response}</p>
+        `;
+      }
+    });
+  </script>
+</body>
+</html>
