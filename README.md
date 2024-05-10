@@ -30,7 +30,6 @@ Programming Language :
    Python, JS
 
 Libraries/Frameworks :
-
 Flask: For building the HTTP server to host the chatbot.
 
 NLTK: For natural language processing tasks such as tokenization and lemmatization.
