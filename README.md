@@ -26,11 +26,19 @@ Cbot( Flask Server containing the Chatbot ) :
 
 # Tech Stack:
 Programming Language : 
+
    Python, JS
 
 Libraries/Frameworks :
+
 Flask: For building the HTTP server to host the chatbot.
+
 NLTK: For natural language processing tasks such as tokenization and lemmatization.
+
 Keras: For building and training neural network models.
+
 Model Deployment: The trained model is deployed using Flask as a RESTful API endpoint.
+
 Version Control: Git and GitHub are used for version control and collaboration.
+
+
