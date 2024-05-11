@@ -14,7 +14,6 @@
   .submit-btn {
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #007bff;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -22,29 +21,22 @@
     cursor: pointer;
   }
   
-  .submit-btn:hover {
-    background-color: #0056b3;
-  }
-  
+
 
 
 
   .chat-container {
     display: flex;
-    justify-content: center; /* Center the chat container horizontally */
-    align-items: center; /* Center the chat container vertically */
+    justify-content: center; 
+    align-items: center; 
   }
   
   .bot-image {
-    width: 240px; /* Set the width of the bot image */
-    height: auto; /* Maintain aspect ratio */
-    margin-right: 1px; /* Adjust the spacing between the bot image and the container */
+    width: 240px; 
+    height: auto; 
+    margin-right: 1px;
   }
   
-  /* .container {
-    max-width: 90%;
-  } */
-
   .chat-container{
     background: #000;;
   }
@@ -82,14 +74,19 @@ body {
 .submit-btn {
   padding: 10px 20px;
   border: none;
-  background-color: #007bff;
+  background-color: #ffffff;
   color: #fff;
   border-radius: 5px;
   cursor: pointer;
+  margin-left: -18px;
 }
 
-.submit-btn:hover {
-  background-color: #0056b3;
+.submit-btn:hover svg path {
+  fill : red;
+  background-color: white;
+}
+.submit-btn:hover{
+  background-color: white;
 }
 
 .error {
