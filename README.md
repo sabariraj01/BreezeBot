@@ -1,8 +1,8 @@
-Mental Health Care Chatbot
+# Mental Health Care Chatbot
  
 This project is a chatbot implemented using natural language processing (NLP) techniques and a neural network architecture. The chatbot is designed to understand user queries and respond appropriately based on predefined intents.
 
-Features:
+# Features:
 
 Intent Recognition : The chatbot recognizes different intents or categories of user queries.
 
@@ -10,17 +10,22 @@ Natural Language Understanding : It understands user messages using NLP techniqu
 
 Contextual Responses : The chatbot generates responses based on the predicted intent, providing appropriate and contextual replies to user queries.
 
-Usage :
+# Usage :
+
 Frontend ( After getting inside of my-app directory ) :
 
-npm start
+    npm start
+    
 Backend :
 
-npm start
+    npm start
+    
 Cbot( Flask Server containing the Chatbot ) :
 
-python app.py
-Tech Stack:
+    python app.py
+    
+# Tech Stack:
+
 Programming Language :
 
 Python, JS
@@ -37,4 +42,4 @@ Model Deployment : The trained model is hosted using Flask as a RESTful API endp
 
 Version Control : Git and GitHub are used for version control and collaboration.
 
-Sample Outputs :
+# Sample Outputs :
