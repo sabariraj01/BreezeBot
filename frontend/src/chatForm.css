@@ -1,24 +1,90 @@
 .form-container {
-  display: flex;
-  align-items: center;
-  color: #cacbc2;
+    display: flex;
+    align-items: center;
+    color: #cacbc2;
+  }
+  
+  .input-field {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .submit-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  .submit-btn:hover {
+    background-color: #0056b3;
+  }
+  
+
+
+
+  .chat-container {
+    display: flex;
+    justify-content: center; /* Center the chat container horizontally */
+    align-items: center; /* Center the chat container vertically */
+  }
+  
+  .bot-image {
+    width: 240px; /* Set the width of the bot image */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 1px; /* Adjust the spacing between the bot image and the container */
+  }
+  
+  /* .container {
+    max-width: 90%;
+  } */
+
+  .chat-container{
+    background: #000;;
+  }
+  
+
+  header {
+    text-align: center; /* Center the text */
+    color: #39ffb3;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 20px 0;
+  }
+  
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-.input-field {
+
+
+.message {
+  margin-bottom: 10px;
   padding: 10px;
-  font-size: 16px;
-  border: 2px solid #ccc;
   border-radius: 5px;
+  color:#f9f9f9
 }
+
+
+.form-container {
+  padding: 20px;
+}
+
 
 .submit-btn {
   padding: 10px 20px;
-  font-size: 16px;
+  border: none;
   background-color: #007bff;
   color: #fff;
-  border: none;
   border-radius: 5px;
-  margin-left: 10px;
   cursor: pointer;
 }
 
@@ -26,80 +92,14 @@
   background-color: #0056b3;
 }
 
-
-
-
-.chat-container {
-  display: flex;
-  justify-content: center; /* Center the chat container horizontally */
-  align-items: center; /* Center the chat container vertically */
-}
-
-.bot-image {
-  width: 240px; /* Set the width of the bot image */
-  height: auto; /* Maintain aspect ratio */
-  margin-right: 1px; /* Adjust the spacing between the bot image and the container */
-}
-
-/* .container {
-  max-width: 90%;
-} */
-
-.chat-container{
-  background: #000;;
-}
-
-
-header {
-  text-align: center; /* Center the text */
-  color: #39ffb3;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  padding: 20px 0;
-}
-
-
-body {
-font-family: Arial, sans-serif;
-margin: 0;
-padding: 0;
-}
-
-
-
-.message {
-margin-bottom: 10px;
-padding: 10px;
-border-radius: 5px;
-color:#f9f9f9
-}
-
-
-.form-container {
-padding: 20px;
-}
-
-
-.submit-btn {
-padding: 10px 20px;
-border: none;
-background-color: #007bff;
-color: #fff;
-border-radius: 5px;
-cursor: pointer;
-}
-
-.submit-btn:hover {
-background-color: #0056b3;
-}
-
 .error {
-color: red;
-margin-top: 10px;
+  color: red;
+  margin-top: 10px;
 }
 
 .response {
-margin-top: 10px;
-padding: 15px;
-background-color: #f9f9f9;
-border-radius: 5px;
+  margin-top: 10px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
 }

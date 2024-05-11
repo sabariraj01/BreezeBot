@@ -9,7 +9,7 @@ import numpy as np
 from keras.models import Sequential
 from keras.layers import Dense, Activation, Dropout
 from keras.layers import Layer, Dense
-import random
+import random 
 from keras.layers import Embedding, LSTM
 from tensorflow.keras.layers import Bidirectional
 
@@ -54,7 +54,7 @@ classes = sorted(list(set(classes)))
 
 
 pickle.dump(words, open('texts.pkl', 'wb'))
-pickle.dump(classes, open('labels.pkl', 'wb'))
+pickle.dump(classes, open('labels.pkl', 'wb')) 
 
 training = []
 output_empty = [0] * len(classes)

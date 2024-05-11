@@ -19,20 +19,17 @@ app.post("/chatbot_response", (req, res) => {
   const pythonProcess = spawn("python", ["../Cbot/app.py", message]);
 
   pythonProcess.stdout.on("data", (data) => {
-    // Send the data as the response to the client
     res.send({ response: data.toString() });
   });
 
-  // Listen for errors from the Python process
+
   pythonProcess.stderr.on("data", (data) => {
-    // Log the error to the console
     console.error(data.toString());
-    // Send an error response to the client
     res.status(500).send({ error: "An error occurred in the Python script." });
   });
 });
 
-// Authentication routes
+
 app.use("/auth", authRoutes);
 
 app.use(express.json());
