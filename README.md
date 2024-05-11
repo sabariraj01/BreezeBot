@@ -2,7 +2,7 @@
  
 This project is a chatbot implemented using natural language processing (NLP) techniques and a neural network architecture. The chatbot is designed to understand user queries and respond appropriately based on predefined intents.
 
-# Features:
+# Features :
 
 Intent Recognition : The chatbot recognizes different intents or categories of user queries.
 
@@ -20,15 +20,13 @@ Backend :
 
     npm start
     
-Cbot( Flask Server containing the Chatbot ) :
+Cbot ( Flask Server containing the Chatbot ) :
 
     python app.py
     
 # Tech Stack:
 
-Programming Language :
-
-Python, JS
+Programming Language : Python, JS
 
 Libraries/Frameworks :
 
