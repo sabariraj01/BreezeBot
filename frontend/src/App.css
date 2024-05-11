@@ -4,7 +4,7 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
-  background-color: #1a0101; /* Light gray background color */
+  background-color: #000000; 
   font-family: Arial, sans-serif;
 }
 
@@ -21,7 +21,7 @@ body {
 .input-field {
   width: calc(100% - 100px);
   padding: 15px;
-  border: 2px solid #007bff; /* Blue border */
+  border: 2px solid #007bff;
   border-radius: 30px;
   font-size: 18px;
   margin-right: 20px;
@@ -43,17 +43,17 @@ body {
 }
 
 .error {
-  color: #ff0000; /* Red color for error messages */
+  color: #ff0000; 
   margin-top: 20px;
   font-size: 16px;
 }
 
 .response {
   margin-top: 20px;
-  font-size: 24px; /* Increase font size */
-  background-color: #f9f9f9; /* Light gray background color */
-  padding: 20px; /* Add padding for better readability */
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+  font-size: 24px; 
+  background-color: #f9f9f9; 
+  padding: 20px; 
+  border-radius: 10px; 
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
 }
 

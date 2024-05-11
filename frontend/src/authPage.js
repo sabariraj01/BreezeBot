@@ -13,7 +13,7 @@ const AuthPage = () => {
   return (
     <div>
       {isLogin ? <Login /> : <Register />}
-      <button onClick={toggleAuthMode}>{isLogin ? 'Switch to Register' : 'Switch to Login'}</button>
+      <button className='buttonreg' onClick={toggleAuthMode}>{isLogin ? 'Switch to Register' : 'Switch to Login'}</button>
     </div>
   );
 };

@@ -23,7 +23,7 @@ const Register = () => {
     };
   
     return (
-      <div className='container'>
+      <div className=''>
         <h2>Register</h2>
         <form onSubmit={handleRegister}>
           <input className='input' type="text" placeholder="Username" onChange={(e) => setUsername(e.target.value)} required />
