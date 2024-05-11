@@ -31,3 +31,9 @@ Programming Language : Python, JS
 Libraries/Frameworks : Flask, NLTK, Keras, Model Deployment, Version Control,
 
 # Sample Outputs :
+
+![image](https://github.com/sabariraj01/Mental-Health-Care_Chatbot/assets/114046096/3aa73594-5cda-4636-8536-21fc0466bb06)
+
+![image](https://github.com/sabariraj01/Mental-Health-Care_Chatbot/assets/114046096/22371afd-129f-428a-9833-de0942c450a8)
+
+
