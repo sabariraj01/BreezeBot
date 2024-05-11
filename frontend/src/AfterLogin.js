@@ -5,7 +5,7 @@ import AuthPage from './authPage';
 import ErrorMessage from './chatErrorMsg';
 import ResponseMessage from './chatResponseMsg';
 import Form from './chatForm';
-import botImage from './airobot.png'
+import botImage from 'airbot.png'
 
 
 const AfterLogin = () => {
