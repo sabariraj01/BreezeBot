@@ -11,7 +11,8 @@ from keras.layers import Dense, Activation, Dropout
 from keras.layers import Layer, Dense
 import random 
 from keras.layers import Embedding, LSTM
-from tensorflow.keras.layers import Bidirectional
+from keras.layers import Flatten
+# from tensorflow.keras.layers import Bidirectional
 
 
 nltk.download('stopwords')
@@ -19,7 +20,7 @@ nltk.download('punkt')
 lemmatizer = WordNetLemmatizer()
 ignore_words = ['?', '!']
 
-with open('data/dataset.json') as file:
+with open(r'D:\SSR-CLG\SEM-6\SWE\Project\final_project_chatbot\Mental-Health-Care_Chatbot\Cbot\data\dataset.json') as file:
     intents = json.load(file)
 
 
@@ -90,13 +91,13 @@ vocab_size = len(words) + 1
 
 model = Sequential()
 model.add(Embedding(vocab_size, 50, input_length=max_seq_length))
-model.add(Bidirectional(LSTM(50)))  
+model.add(Flatten())
+# model.add(Bidirectional(LSTM(50)))  
 model.add(Dense(50, activation='relu'))
 model.add(Dropout(0.5))
 model.add(Dense(len(classes) , activation='softmax'))
 
 model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
-
 model.fit(train_x, train_y, epochs=200, batch_size=32)
 
 loss, accuracy = model.evaluate(train_x, train_y)

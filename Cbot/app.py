@@ -13,7 +13,7 @@ app = Flask(__name__)
 CORS(app)  
 
 
-model = load_model('./model.h5')
+model = load_model(r'./model.h5')
 intents = json.loads(open('./data/dataset.json').read())
 words = pickle.load(open('./texts.pkl','rb'))
 classes = pickle.load(open('./labels.pkl','rb'))

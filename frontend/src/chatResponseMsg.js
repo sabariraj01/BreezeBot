@@ -1,7 +1,8 @@
 import React from 'react';
 import './chatResponseMsg.css'; 
 
-const ResponseMessage = ({ response }) => response && <div className="response">{response}</div>;
+const ResponseMessage = ({ response }) => 
+    response && <div className="response">{response}</div>;
 
 export default ResponseMessage;
 
