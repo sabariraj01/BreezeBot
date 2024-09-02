@@ -1,51 +1,34 @@
-const express = require("express");
-const { spawn } = require("child_process");
-const mongoose = require("mongoose");
-const cors = require("cors");
-const helmet=require('helmet')
-require("dotenv").config();
-const authRoutes = require("./routes/authRoutes");
+const express = require('express');
+const mongoose = require('mongoose');
+const cors = require('cors');
+const dotenv = require('dotenv');
+const cookieParser = require('cookie-parser');
+const helmet = require('helmet');
+
+dotenv.config();
+
+const userRoutes = require('./routes/userRoutes');
+const chatRoutes = require('./routes/chatRoutes');
+const connectDB = require('./config/db');
+const { errorHandler } = require('./middleware/errorMiddleware');
+const logger = require('./utils/logger');
 
 const app = express();
 
-app.use(cors())
-app.use(helmet())
-app.use(express.json()); 
-app.use(express.urlencoded({ extended: true }))
+app.use(cors({ origin: process.env.FRONTEND_URL, credentials: true }));
+app.use(express.json());
+app.use(cookieParser());
+app.use(helmet());
 
-app.use("/auth", authRoutes);
+connectDB();
 
+app.use('/api/users', userRoutes);
+app.use('/api/chats', chatRoutes); 
+
+app.use(errorHandler);
 
 const PORT = process.env.PORT || 5000;
-app.post("/chatbot_response", (req, res) => 
-{
-  const message = req.body.message;
-  const pythonProcess = spawn("python", ["../Cbot/app.py", message]);
-
-  pythonProcess.stdout.on("data", (data)=> 
-  {
-    res.send({ response: data.toString() });
-  });
-  pythonProcess.stderr.on("data", (data) => 
-  {
-    console.error(data.toString());
-    res.status(500).send({ error: "An error occurred in the Python script." });
-  });
+app.listen(PORT, () => {
+    logger.info(`Server running on port ${PORT}`);
+    console.log(`Server running on port ${PORT}`);
 });
-
-
-
-
-mongoose.connect(process.env.MONGODB_URI)
-  .then(() => 
-  {
-    app.listen(PORT, () => 
-    {
-      console.log(`Server running on http://localhost:${PORT}`);
-    });
-  })
-  .catch((error) => 
-  {
-    console.error("MongoDB connection error : ", error)
-    process.exit(1);
-  })
