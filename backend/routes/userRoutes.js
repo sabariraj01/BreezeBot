@@ -19,7 +19,7 @@ router.use(apiKeyMiddleware);
 router.post('/register', validateRegister, registerUser);
 router.post('/login', validateLogin, authUser);
 router.post('/logout', protect, logoutUser);
-router.get('/validateToken', validateToken); // New route for token validation
+router.get('/validateToken', validateToken); 
 router.route('/profile').get(protect, getUserProfile).put(protect, validateUpdateProfile, updateUserProfile);
 router.post('/forgotpassword', validateForgotPassword, forgotPassword);
 router.put('/resetpassword', validateResetPassword, resetPassword);
