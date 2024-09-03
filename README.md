@@ -16,34 +16,34 @@ BreezeBot is a comprehensive Mental-Health-Care Chatbot designed to provide empa
 
 ## ✨ Features
 
-- **🔒 User Authentication:** Secure registration, login, and password management with JWT-based authentication.
-- **💬 Chat Functionality:** Real-time chat with the BreezeBot, which offers mental health advice and resources.
-- **📝 Chat History:** User chat history is saved and can be retrieved at any time.
-- **🔑 Password Management:** Secure password storage with bcrypt, including password history to prevent reuse.
-- **🔐 OTP-based Password Reset:** Users can reset their passwords securely using an OTP sent to their email.
-- **🤖 AI/ML Integration:** The bot utilizes natural language processing (NLP) and machine learning (ML) to understand user inputs and provide relevant responses.
+- **🔒 User Authentication** : Secure registration, login, and password management with JWT-based authentication.
+- **💬 Chat Functionality** : Real-time chat with the BreezeBot, which offers mental health advice and resources.
+- **📝 Chat History** : User chat history is saved and can be retrieved at any time.
+- **🔑 Password Management** : Secure password storage with bcrypt, including password history to prevent reuse.
+- **🔐 OTP-based Password Reset** : Users can reset their passwords securely using an OTP sent to their email.
+- **🤖 AI/ML Integration** : The bot utilizes natural language processing (NLP) and machine learning (ML) to understand user inputs and provide relevant responses.
 
 ## 💻 Technologies Used
 
 ### Backend
 
-- **Node.js**: Server-side JavaScript runtime.
-- **Express.js**: Web framework for Node.js.
-- **MongoDB**: NoSQL database for storing user data and chat history.
-- **Mongoose**: Object Data Modeling (ODM) library for MongoDB.
-- **JWT (JSON Web Tokens)**: For secure user authentication.
-- **bcrypt.js**: For hashing passwords and managing password history.
-- **Winston**: For logging server events.
-- **Flask**: Python-based backend for the chatbot AI/ML model.
-- **Keras**: Deep learning framework used for training the chatbot model.
-- **NLTK**: Natural Language Toolkit for processing text inputs.
+- **Node.js** : Server-side JavaScript runtime.
+- **Express.js** : Web framework for Node.js.
+- **MongoDB** : NoSQL database for storing user data and chat history.
+- **Mongoose** : Object Data Modeling (ODM) library for MongoDB.
+- **JWT (JSON Web Tokens)** : For secure user authentication.
+- **bcrypt.js** : For hashing passwords and managing password history.
+- **Winston** : For logging server events.
+- **Flask** : Python-based backend for the chatbot AI/ML model.
+- **Keras** : Deep learning framework used for training the chatbot model.
+- **NLTK** : Natural Language Toolkit for processing text inputs.
 
 ### Frontend
 
-- **React.js**: JavaScript library for building user interfaces.
-- **Bootstrap**: CSS framework for responsive design.
-- **Styled Components**: For writing CSS in JS with styled-components.
-- **React Router**: For routing in the React app.
+- **React.js** : JavaScript library for building user interfaces.
+- **Bootstrap** : CSS framework for responsive design.
+- **Styled Components** : For writing CSS in JS with styled-components.
+- **React Router** : For routing in the React app.
 
 ## ⚙️ Setup and Installation
 
@@ -130,30 +130,30 @@ BreezeBot is a comprehensive Mental-Health-Care Chatbot designed to provide empa
 
 ### User Routes
 
-- **POST /api/users/register:** Register a new user.
-- **POST /api/users/login:** Log in a user.
-- **POST /api/users/logout:** Log out the current user.
-- **GET /api/users/profile:** Get the profile of the logged-in user.
-- **PUT /api/users/profile:** Update the profile of the logged-in user.
-- **POST /api/users/forgotpassword:** Request a password reset OTP.
-- **PUT /api/users/resetpassword:** Reset the password using the OTP.
+- **POST /api/users/register :** Register a new user.
+- **POST /api/users/login :** Log in a user.
+- **POST /api/users/logout :** Log out the current user.
+- **GET /api/users/profile :** Get the profile of the logged-in user.
+- **PUT /api/users/profile :** Update the profile of the logged-in user.
+- **POST /api/users/forgotpassword :** Request a password reset OTP.
+- **PUT /api/users/resetpassword :** Reset the password using the OTP.
 
 ### Chat Routes
 
-- **POST /api/chats/save:** Save a chat message.
-- **GET /api/chats:** Retrieve chat messages for a specific user.
+- **POST /api/chats/save :** Save a chat message.
+- **GET /api/chats :** Retrieve chat messages for a specific user.
 
 
 ## 📸 Sample Images
 
 
-- **Home Page : ** A screenshot of the home page.
+- **Home Page :** A screenshot of the home page.
 ![image](https://github.com/user-attachments/assets/4e6f0b16-cd9d-4510-bc4d-2edca8c36124)
-- **Chat Interface : ** A screenshot of the chat interface.
+- **Chat Interface :** A screenshot of the chat interface.
 ![image](https://github.com/user-attachments/assets/91dc2938-b2d7-4ee1-897d-d53b6918a85d)
-- **Login : ** Screenshots of the login forms.
+- **Login :** Screenshots of the login forms.
 ![image](https://github.com/user-attachments/assets/1fffa8a1-33d9-4e44-a6f0-97561fb9a78e)
-- **Register : ** Screenshots of the registration forms.
+- **Register :** Screenshots of the registration forms.
 ![image](https://github.com/user-attachments/assets/5321d9de-9917-458f-ab64-fbb213c68c93)
 
 
