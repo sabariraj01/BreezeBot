@@ -6,7 +6,6 @@ import Container from "react-bootstrap/Container";
 import { AuthContext } from "../context/AuthContext";
 import styled, { createGlobalStyle } from "styled-components";
 
-// Global style for the font
 const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
   
@@ -15,10 +14,9 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-// Styled Navbar with gradient background and shadow
 const StyledNavbar = styled(Navbar)`
   transition: background-color 0.3s, box-shadow 0.3s;
-  background: linear-gradient(90deg, #0056b3, #007bff);
+  background: #000000; /* Black background */
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
   padding: 0.7rem 1.5rem;
   font-family: 'Poppins', sans-serif;
@@ -34,7 +32,7 @@ const StyledCollapse = styled(Navbar.Collapse)`
 `;
 
 const StyledNavLink = styled(Nav.Link)`
-  color: #ffffff !important;
+  color: #ffffff !important; /* White text */
   margin: 0 20px;
   font-weight: 600;
   font-family: 'Poppins', sans-serif;
@@ -42,8 +40,8 @@ const StyledNavLink = styled(Nav.Link)`
   transition: color 0.3s ease-in-out;
 
   &:hover {
-    color: #ffeb3b !important;
-    text-shadow: 0 0 10px #ffeb3b;
+    color: #ff0000 !important; /* Red on hover */
+    text-shadow: 0 0 10px #ff0000;
   }
 
   @media (max-width: 768px) {
@@ -53,10 +51,10 @@ const StyledNavLink = styled(Nav.Link)`
 `;
 
 const StyledButton = styled.button`
-  color: #007bff !important;
-  border: 2px solid #007bff !important;
+  color: #000000 !important; /* Black text on button */
+  border: 2px solid #ffd700 !important; /* Gold border */
   padding: 5px 15px;
-  background-color: #ffffff !important;
+  background-color: #ffd700 !important; /* Gold background */
   border-radius: 20px;
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
@@ -64,9 +62,9 @@ const StyledButton = styled.button`
   transition: all 0.3s ease-in-out;
 
   &:hover {
-    color: #ffffff !important;
-    background-color: #007bff !important;
-    border-color: #007bff !important;
+    color: #ffffff !important; /* White text on hover */
+    background-color: #ff0000 !important; /* Red background on hover */
+    border-color: #ff0000 !important; /* Red border on hover */
   }
 
   @media (max-width: 768px) {
@@ -78,11 +76,16 @@ const StyledButton = styled.button`
 `;
 
 const StyledNavbarBrandText = styled.span`
-  color: #ffffff;
+  color: #ffd700; /* Gold text */
   font-size: 1.8rem;
   font-weight: bold;
   text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
   font-family: 'Poppins', sans-serif;
+
+  &:hover {
+    color: #ff0000 !important; /* Red on hover */
+    text-shadow: 0 0 10px #ff0000;
+  }
 
   @media (max-width: 768px) {
     text-align: center;
@@ -91,12 +94,12 @@ const StyledNavbarBrandText = styled.span`
 `;
 
 const CenteredUsername = styled.div`
-  color: #ffffff;
+  color: #ffd700; /* Gold text */
   font-size: 1.2rem;
-  font-weight: 600;
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  font-weight: 700; /* Bold text */
+  text-shadow: 0 0 5px rgba(255, 215, 0, 0.8); /* Stronger gold glow */
   font-family: 'Poppins', sans-serif;
-  margin-right: 20px;  // Add margin-right to increase space between username and logout button
+  margin-right: 30px;  // Increased margin to highlight space
 `;
 
 function Header() {
@@ -147,7 +150,6 @@ function Header() {
                 </>
               )}
               
-
               {isAuth && user && (
                 <>
                   <Nav.Item>
@@ -155,11 +157,9 @@ function Header() {
                       Chat with 🤖
                     </StyledNavLink>
                   </Nav.Item>
-                  {isAuth && user && ( 
-                    <Nav.Item>
-                        <CenteredUsername>{user.username}</CenteredUsername>
-                    </Nav.Item> 
-          )}
+                  <Nav.Item>
+                    <CenteredUsername>{user.username}</CenteredUsername>
+                  </Nav.Item> 
                   <Nav.Item>
                     <StyledButton onClick={handleLogout}>
                       Logout

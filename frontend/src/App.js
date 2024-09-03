@@ -14,7 +14,7 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right, #4e54c8, #8f94fb);
+    background: linear-gradient(to right, #1b1b1b, #444444);
     overflow-y: auto;
     overflow-x: hidden;
     display: flex;
@@ -43,18 +43,18 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .card {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.9);
     border-radius: 15px;
     padding: 2rem;
-    color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #f0c040; /* Gold text color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     max-width: 600px;
     width: 100%;
     margin: 0 auto;
   }
 
   .gradientText {
-    background: linear-gradient(90deg, #ff7e5f, #feb47b);
+    background: linear-gradient(90deg, #ff6f61, #ff4757);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: bold;
@@ -66,6 +66,7 @@ const GlobalStyle = createGlobalStyle`
     margin-top: 2rem;
     font-size: 1.1rem;
     line-height: 1.6;
+    color: #d4af37; /* Lighter gold for informational text */
   }
 
   @media (max-width: 768px) {
@@ -86,6 +87,7 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 `;
+
 
 function App() {
   const { isAuth, loading } = useContext(AuthContext);

@@ -12,13 +12,14 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     font-family: 'Orbitron', sans-serif;
-    background-color: #000000; /* Black */
+    background-color: #0a0f24; /* Deep blue */
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    color: #ffffff; /* Soft white */
   }
 `;
 
@@ -39,13 +40,13 @@ const ChatSection = styled.div`
   flex-direction: column;
   justify-content: space-between;
   padding: 1rem;
-  background-color: #1e1e1e; /* Dark grey */
+  background-color: #000000; /* Black */
 `;
 
 const DesignSection = styled.div`
   flex: 1;
-  background: #dcd0c0; /* Sepia tone */
-  color: #4a2c2a; /* Dark brown */
+  background: linear-gradient(to top, black, #b29546); /* Black to dark gold gradient */
+  color: #f5f5f5; /* Soft white */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -54,38 +55,40 @@ const DesignSection = styled.div`
 `;
 
 const BotImage = styled.img`
-  width: 150px;
+  width: 225px;
   height: auto;
   margin-bottom: 20px;
 `;
 
 const BotName = styled.h1`
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: bold;
-  color: #4a2c2a; /* Dark brown */
+  color: #f5f5f5; /* Soft white */
+  text-shadow: 2px 2px 4px #b29546; /* Gold text-shadow */
 `;
+
 
 const ChatArea = styled.div`
   flex: 1;
   overflow-y: auto;
   padding: 1rem;
-  background-color: #000000; /* Black */
+  background-color: #1e1e1e; /* Dark grey */
   border-radius: 10px;
-  box-shadow: inset 0 0 10px rgba(0, 255, 255, 0.2);
+  box-shadow: inset 0 0 10px rgba(255, 0, 0, 0.5); /* Red glow */
   margin-bottom: 1rem;
   display: flex;
   flex-direction: column;
 `;
 
 const ChatBubble = styled.div`
-  background-color: ${(props) => (props.isUser ? '#00ffff' : '#333')}; /* Cyan or dark grey */
-  color: ${(props) => (props.isUser ? '#000' : '#fff')};
+  background-color: ${(props) => (props.isUser ? '#ddbf12' : '#43484d')}; /* Gold or dark silver */
+  color: ${(props) => (props.isUser ? '#000000' : '#f5f5f5')}; /* Black or soft white */
   padding: 10px;
   border-radius: 20px;
   margin: 10px 0;
   align-self: ${(props) => (props.isUser ? 'flex-end' : 'flex-start')};
   max-width: 70%;
-  box-shadow: 0 2px 5px rgba(0, 255, 255, 0.5);
+  box-shadow: 0 2px 5px rgba(255, 0, 0, 0.5); /* Red shadow */
   word-wrap: break-word;
 `;
 
@@ -99,37 +102,36 @@ const InputField = styled.input`
   flex: 1;
   padding: 10px 15px;
   border-radius: 20px;
-  border: 2px solid #00ffff; /* Cyan */
+  border: 2px solid #ffd700; /* Gold */
   font-family: 'Orbitron', sans-serif;
   font-size: 1rem;
   margin-right: 10px;
   outline: none;
-  box-shadow: 0 2px 5px rgba(0, 255, 255, 0.2);
+  box-shadow: 0 2px 5px rgba(255, 0, 0, 0.2); /* Red shadow */
 
   &:focus {
-    border-color: #ff00ff; /* Neon pink */
+    border-color: #ff0000; /* Red */
   }
 `;
 
 const SubmitButton = styled.button`
-  background-color: #000000; /* Cyan */
+  background-color: #000000; /* Black */
   color: white;
   padding: 10px;
   border: none;
   border-radius: 50%;
   font-family: 'Orbitron', sans-serif;
-  font-size: 1.5rem; /* Adjust size as needed */
+  font-size: 1.5rem;
   cursor: pointer;
-  box-shadow: 0 2px 5px rgba(0, 255, 255, 0.5);
+  box-shadow: 0 2px 5px rgba(255, 0, 0, 0.5); /* Red shadow */
   display: flex;
   align-items: center;
   justify-content: center;
-  
+
   &:hover {
-    background-color: #ff00c3; /* Neon pink */
+    background-color: #ff0000; /* Red */
   }
 `;
-
 
 const AfterLogin = () => {
   const [input, setInput] = useState('');
@@ -250,7 +252,7 @@ const AfterLogin = () => {
         </ChatSection>
         <DesignSection>
           <BotImage src={botImage} alt="bot" />
-          <BotName>BreezeBot ..!</BotName>
+          <BotName>BreezeBot ✨</BotName>
         </DesignSection>
       </Container>
     </>
