@@ -9,7 +9,6 @@ export const AuthProvider = ({ children }) => {
   const [isAuth, setIsAuth] = useState(false);
   const [loading, setLoading] = useState(true);
 
-  // Validate token on app load
   useEffect(() => {
     const validateToken = async () => {
       try {

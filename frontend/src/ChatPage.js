@@ -133,7 +133,7 @@ const SubmitButton = styled.button`
   }
 `;
 
-const AfterLogin = () => {
+const ChatPage = () => {
   const [input, setInput] = useState('');
   const [messages, setMessages] = useState([]);
   const { user, isAuth } = useContext(AuthContext);
@@ -260,4 +260,4 @@ const AfterLogin = () => {
 };
 
 
-export default AfterLogin;
+export default ChatPage;

@@ -71,8 +71,6 @@ const ProfilePage = () => {
 
       setMessage('Profile updated successfully!');
       setError(null);
-
-      // Clear fields and uncheck checkboxes
       setSelectedFields([]);
       setPassword('');
       setConfirmPassword('');

@@ -5,7 +5,7 @@ import HomePage from './pages/HomePage';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import { AuthContext } from './context/AuthContext';
-import AfterLogin from './AfterLogin';
+import ChatPage from './ChatPage';
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
@@ -105,7 +105,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/login" element={isAuth ? <Navigate to="/profile" /> : <LoginPage />} />
           <Route path="/register" element={isAuth ? <Navigate to="/profile" /> : <RegisterPage />} />
-          <Route path="/chat" element={isAuth ? <AfterLogin /> : <Navigate to="/login" />} />
+          <Route path="/chat" element={isAuth ? <ChatPage /> : <Navigate to="/login" />} />
         </Routes>
       </main>
     </>

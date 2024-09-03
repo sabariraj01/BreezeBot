@@ -54,7 +54,7 @@ const RegisterPage = () => {
         className="mx-auto shadow p-4 rounded"
         style={{
           maxWidth: '400px',
-          minHeight: '500px', // Increase form height
+          minHeight: '500px', 
           border: '2px solid gold',
           backgroundColor: 'black',
         }}

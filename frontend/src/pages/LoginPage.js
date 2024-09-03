@@ -13,7 +13,7 @@ const LoginPage = () => {
   const [message, setMessage] = useState(null);
   const [error, setError] = useState(null);
   const [showModal, setShowModal] = useState(false);
-  const [modalStep, setModalStep] = useState('forgotPassword'); // forgotPassword, resetPassword
+  const [modalStep, setModalStep] = useState('forgotPassword'); 
   const [loading, setLoading] = useState(false);
   const { login } = React.useContext(AuthContext);
   const navigate = useNavigate();
