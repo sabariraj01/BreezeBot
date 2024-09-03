@@ -103,7 +103,7 @@ BreezeBot is a comprehensive Mental-Health-Care Chatbot designed to provide empa
     npm start
     ```
 
-### AI/ML Model Setup
+### AI/ML Model Setup (ChatBot)
 
 1. Install Python dependencies:
     ```bash
@@ -142,10 +142,6 @@ BreezeBot is a comprehensive Mental-Health-Care Chatbot designed to provide empa
 
 - **POST /api/chats/save:** Save a chat message.
 - **GET /api/chats:** Retrieve chat messages for a specific user.
-
-## 📁 Project Structure
-
-BreezeBot/ │ ├── backend/ │ ├── config/ # Database and logger configuration │ ├── controllers/ # Route handlers for user and chat functionalities │ ├── middleware/ # Custom middleware functions (auth, API key, error handling) │ ├── models/ # Mongoose models for User and Chat │ ├── routes/ # Express routes for user and chat APIs │ ├── utils/ # Utility functions (logger) │ ├── .env # Environment variables │ └── server.js # Main server file │ ├── frontend/ │ ├── public/ # Public assets │ ├── src/ # React components, context, and pages │ │ ├── components │ │ ├── context │ │ ├── pages │ │ └── App.js # Main React app file │ └── .env # Environment variables for frontend │ ├── Cbot/ │ ├── app.py # Flask server for the chatbot │ ├── bot_creation.py # Script to create and train the chatbot model │ ├── data/ │ │ └── dataset.json # Training data for the chatbot │ ├── texts.pkl # Preprocessed words (pickle) │ ├── labels.pkl # Labels for intents (pickle) │ └── model.h5 # Trained Keras model │ └── LICENSE └── README.md
 
 
 ## 📸 Sample Images
