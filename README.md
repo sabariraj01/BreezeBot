@@ -151,10 +151,11 @@ BreezeBot is a comprehensive Mental-Health-Care Chatbot designed to provide empa
 - **Login/Register:** Screenshots of the login and registration forms.
 - **Chatbot in Action:** A screenshot showing the chatbot responding to a user query.
 
-![Home Page](./sample-images/home-page.png)
-![Chat Interface](./sample-images/chat-interface.png)
-![Login](./sample-images/login.png)
-![Register](./sample-images/register.png)
+![image](https://github.com/user-attachments/assets/4e6f0b16-cd9d-4510-bc4d-2edca8c36124)
+![image](https://github.com/user-attachments/assets/91dc2938-b2d7-4ee1-897d-d53b6918a85d)
+![image](https://github.com/user-attachments/assets/1fffa8a1-33d9-4e44-a6f0-97561fb9a78e)
+![image](https://github.com/user-attachments/assets/5321d9de-9917-458f-ab64-fbb213c68c93)
+
 
 ## 🤝 Contributing
 
