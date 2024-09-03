@@ -69,14 +69,14 @@ BreezeBot is a comprehensive Mental-Health-Care Chatbot designed to provide empa
 
 3. Create a `.env` file in the `backend` directory and add the following:
     ```env
-    PORT=5000
-    MONGO_URI=mongodb://localhost:27017/chatbot
-    JWT_SECRET=your_secret_key
-    NODE_ENV=production
-    EMAIL_USER=your_email@gmail.com
-    EMAIL_PASS=your_email_password
-    API_KEY=your_api_key
-    FRONTEND_URL=http://localhost:3000
+    PORT = 5000
+    MONGO_URI = mongodb://localhost:27017/chatbot
+    JWT_SECRET = your_secret_key
+    NODE_ENV = production
+    EMAIL_USER = your_email@gmail.com
+    EMAIL_PASS = your_email_password
+    API_KEY = your_api_key
+    FRONTEND_URL = http://localhost:3000
     ```
 
 4. Start the backend server:
@@ -94,8 +94,8 @@ BreezeBot is a comprehensive Mental-Health-Care Chatbot designed to provide empa
 
 2. Create a `.env` file in the `frontend` directory and add the following:
     ```env
-    REACT_APP_API_URL=http://localhost:5000
-    REACT_APP_API_KEY=your_api_key
+    REACT_APP_API_URL = http://localhost:5000
+    REACT_APP_API_KEY = your_api_key
     ```
 
 3. Start the frontend server:
@@ -145,7 +145,38 @@ BreezeBot is a comprehensive Mental-Health-Care Chatbot designed to provide empa
 
 ## 📁 Project Structure
 
-BreezeBot/ │ ├── backend/ │ ├── config/ # Database and logger configuration │ ├── controllers/ # Route handlers for user and chat functionalities │ ├── middleware/ # Custom middleware functions (auth, API key, error handling) │ ├── models/ # Mongoose models for User and Chat │ ├── routes/ # Express routes for user and chat APIs │ ├── utils/ # Utility functions (logger) │ ├── .env # Environment variables │ ├── server.js # Main server file │ └── ... │ ├── frontend/ │ ├── public/ # Public assets │ ├── src/ # React components, context, and pages │ ├── .env # Environment variables for frontend │ ├── App.js # Main React app file │ └── ... │ ├── ai_ml/ │ ├── app.py # Flask server for the chatbot │ ├── bot_creation.py # Script to create and train the chatbot model │ ├── dataset.json # Training data for the chatbot │ ├── texts.pkl # Preprocessed words (pickle) │ ├── labels.pkl # Labels for intents (pickle) │ └── model.h5 # Trained Keras model │ └── README.md
+BreezeBot/ 
+└── backend/ 
+  ├── config/ # Database and logger configuration 
+  ├── controllers/ # Route handlers for user and chat functionalities 
+  ├── middleware/ # Custom middleware functions (auth, API key, error handling) 
+  ├── models/ # Mongoose models for User and Chat
+  ├── routes/ # Express routes for user and chat APIs 
+  ├── utils/ # Utility functions (logger) 
+  ├── .env # Environment variables 
+  └── server.js # Main server file 
+  
+└──  frontend/ 
+  ├── public/ # Public assets 
+  ├── src/ # React components, context, and pages
+      ├── components
+      ├── context
+      ├── pages
+      └── App.js # Main React app file
+  └── .env # Environment variables for frontend
+  
+  
+└──  Cbot/ 
+  ├── app.py # Flask server for the chatbot 
+  ├── bot_creation.py # Script to create and train the chatbot model 
+  ├── data/
+        └── dataset.json # Training data for the chatbot 
+  ├── texts.pkl # Preprocessed words (pickle) 
+  ├── labels.pkl # Labels for intents (pickle)
+  └── model.h5 # Trained Keras model 
+  
+└── LICENSE
+└── README.md
 
 
 ## 📸 Sample Images
