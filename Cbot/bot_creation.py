@@ -12,7 +12,6 @@ from keras.layers import Layer, Dense
 import random 
 from keras.layers import Embedding, LSTM
 from keras.layers import Flatten
-# from tensorflow.keras.layers import Bidirectional
 
 
 nltk.download('stopwords')
@@ -20,7 +19,7 @@ nltk.download('punkt')
 lemmatizer = WordNetLemmatizer()
 ignore_words = ['?', '!']
 
-with open(r'D:\SSR-CLG\SEM-6\SWE\Project\final_project_chatbot\Mental-Health-Care_Chatbot\Cbot\data\dataset.json') as file:
+with open(r'./data/dataset.json') as file:
     intents = json.load(file)
 
 
@@ -56,7 +55,6 @@ classes = sorted(list(set(classes)))
 
 pickle.dump(words, open('texts.pkl', 'wb'))
 pickle.dump(classes, open('labels.pkl', 'wb')) 
-
 training = []
 output_empty = [0] * len(classes)
 
@@ -70,7 +68,6 @@ for doc in documents:
     
     output_row = list(output_empty)
     output_row[classes.index(doc[1])] = 1
-    
     training.append([bag, output_row])
 
 random.shuffle(training)
@@ -82,21 +79,16 @@ padded_training = [(pad_sequences([doc[0]], maxlen=max_seq_length)[0], doc[1]) f
 
 train_x = [np.array(doc[0]) for doc in padded_training]
 train_y = [np.array(doc[1]) for doc in padded_training]
-
 train_x = np.array(train_x)
 train_y = np.array(train_y)
-
-
 vocab_size = len(words) + 1
 
 model = Sequential()
 model.add(Embedding(vocab_size, 50, input_length=max_seq_length))
 model.add(Flatten())
-# model.add(Bidirectional(LSTM(50)))  
 model.add(Dense(50, activation='relu'))
 model.add(Dropout(0.5))
 model.add(Dense(len(classes) , activation='softmax'))
-
 model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
 model.fit(train_x, train_y, epochs=200, batch_size=32)
 

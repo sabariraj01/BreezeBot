@@ -14,8 +14,7 @@ const { validateRegister, validateLogin, validateForgotPassword, validateResetPa
 const apiKeyMiddleware = require('../middleware/apiKeyMiddleware');
 
 const router = express.Router();
-
-router.use(apiKeyMiddleware); // Apply API key middleware to all routes
+router.use(apiKeyMiddleware); 
 
 router.post('/register', validateRegister, registerUser);
 router.post('/login', validateLogin, authUser);

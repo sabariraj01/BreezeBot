@@ -34,5 +34,4 @@ userSchema.methods.matchOTP = async function (enteredOTP) {
 };
 
 const User = mongoose.model('User', userSchema);
-
 module.exports = User;

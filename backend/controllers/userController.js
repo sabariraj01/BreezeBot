@@ -53,7 +53,6 @@ const authUser = async (req, res) => {
   }
 
   const { email, password } = req.body;
-
   try {
     const user = await User.findOne({ email });
 
@@ -134,8 +133,8 @@ const updateUserProfile = async (req, res) => {
     if (user) {
       user.username = req.body.username || user.username;
 
-      if (req.body.password) {
-        // Check if new password has been used before
+      if (req.body.password) 
+      {
         const newPasswordHash = await bcrypt.hash(req.body.password, 10);
         const isUsedBefore = await Promise.all(user.passwordHistory.map(async (history) => {
           return await bcrypt.compare(req.body.password, history.password);
@@ -147,14 +146,12 @@ const updateUserProfile = async (req, res) => {
 
         user.passwordHistory.push({ password: newPasswordHash });
         if (user.passwordHistory.length > 5) {
-          user.passwordHistory.shift(); // Keep only last 5 passwords
+          user.passwordHistory.shift();
         }
-
         user.password = req.body.password;
       }
 
       const updatedUser = await user.save();
-
       const token = generateToken(updatedUser._id);
       user.token = token;
       await user.save();
@@ -199,7 +196,6 @@ const forgotPassword = async (req, res) => {
 
     const message = `Your OTP for password reset is: ${otp}. It is valid for 10 minutes.`;
 
-    // Create a transporter
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
@@ -216,7 +212,6 @@ const forgotPassword = async (req, res) => {
     };
 
     await transporter.sendMail(mailOptions);
-
     res.status(200).json({ message: 'OTP sent' });
   } catch (error) {
     res.status(500).json({ message: 'Server error' });
@@ -243,7 +238,6 @@ const resetPassword = async (req, res) => {
 
     const newPasswordHash = await bcrypt.hash(newPassword, 10);
 
-    // Check if new password has been used before
     const isUsedBefore = await Promise.all(user.passwordHistory.map(async (history) => {
       return await bcrypt.compare(newPassword, history.password);
     }));
@@ -254,7 +248,7 @@ const resetPassword = async (req, res) => {
 
     user.passwordHistory.push({ password: newPasswordHash });
     if (user.passwordHistory.length > 5) {
-      user.passwordHistory.shift(); // Keep only last 5 passwords
+      user.passwordHistory.shift(); 
     }
 
     user.password = newPassword;
