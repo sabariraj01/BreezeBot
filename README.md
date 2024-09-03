@@ -146,8 +146,11 @@ BreezeBot is a comprehensive Mental-Health-Care Chatbot designed to provide empa
 ## 📁 Project Structure
 
 BreezeBot/ 
+
 └── backend/ 
+
   ├── config/ # Database and logger configuration 
+
   ├── controllers/ # Route handlers for user and chat functionalities 
   ├── middleware/ # Custom middleware functions (auth, API key, error handling) 
   ├── models/ # Mongoose models for User and Chat
